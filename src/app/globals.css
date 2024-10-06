@@ -1,0 +1,87 @@
+@tailwind base;
+
+@layer base {
+  h1 {
+    @apply text-4xl font-bold tracking-tight sm:max-w-xl sm:text-6xl;
+  }
+  h2 {
+    @apply text-2xl sm:text-4xl font-semibold;
+  }
+  h3 {
+    @apply text-xl sm:text-3xl font-semibold;
+  }
+  section {
+    @apply py-20 sm:py-36;
+  }
+  button {
+    @apply bg-[#C1FF72] rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2;
+  }
+  .marquee{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box
+  }
+
+  .marquee p{
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 5s linear infinite;
+    font-size: 1.5rem;
+  }
+
+  @keyframes marquee {
+    0%{
+      transform: translateX(100%);
+    }
+    100%{
+      transform: translateX(-100%);
+    }
+    
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  --padding-inline: 2rem;
+  --content-max-width: 90%;
+  --breakout-max-width: 1400px;
+
+  --breakout-size: calc(
+    (var(--breakout-max-width) - var(--content-max-width)) / 2
+  );
+
+  display: grid;
+  grid-template-columns:
+    [full-width-start] minmax(var(--padding-inline), 1fr)
+    [breakout-start] minmax(0, var(--breakout-size))
+    [content-start] min(
+      100% - (var(--padding-inline) * 2),
+      var(--content-max-width)
+    )
+    [content-end]
+    minmax(0, var(--breakout-size)) [breakout-end]
+    minmax(var(--padding-inline), 1fr) [full-width-end];
+} 
+
+main > :not(.breakout, .full-width),
+.full-width > :not(.breakout, .full-width) {
+  grid-column: content;
+}
+
+.breakout {
+  grid-column: breakout;
+}
+
+.full-width {
+  grid-column: full-width;
+
+  display: grid;
+  grid-template-columns: inherit;
+}
