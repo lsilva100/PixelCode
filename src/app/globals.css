@@ -15,7 +15,8 @@
     height: 618px;
   }
   button {
-    @apply bg-lime-600 rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2;
+    @apply rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2;
+    background: linear-gradient(45deg, rgb(131, 58, 180), rgb(193, 53, 132), rgb(244, 122, 71), rgb(255, 189, 68));
   }
   .marquee{
     width: 100%;
@@ -30,6 +31,8 @@
     animation: marquee 8s linear infinite;
     font-size: 1.5rem;
   }
+
+  
   
 
   @keyframes marquee {
@@ -41,33 +44,7 @@
     }
     
   }
-  .main-background{
-    background-image: url('https://images.unsplash.com/photo-1587582423116-ec07293f0395?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Uma imagem de teste */
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Cor preta com 50% de opacidade */
-    overflow: hidden; /* Evita overflow do conteúdo */
-}
-
-.main-background::before {
-  content: ''; /* Necessário para criar um elemento */
-  position: absolute; /* Posiciona o overlay sobre a imagem */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8); /* Cor preta com 50% de opacidade */
-  z-index: 1; /* Coloca o overlay acima da imagem */
-}
-
-.main-background h1, .main-background p, .main-background button, .main-background header {
-  position: relative; /* Necessário para o texto ficar acima do overlay */
-  z-index: 2; /* Garante que o texto esteja acima do overlay */
-  color: white; /* Ajuste a cor do texto conforme necessário */
-}
-
+  
 }
 
 @tailwind components;
@@ -85,7 +62,7 @@ html {
 
 header{
   grid-column:full-width-start / full-width-end;
-  padding: none;
+  padding: 50px;
 }
 
 main {
