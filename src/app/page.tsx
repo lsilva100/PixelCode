@@ -30,7 +30,7 @@ export default function Home() {
       <section className="relative z-10">
         <h1 className="text-shadow text-withe mx-auto max-w-lg rounded-xl bg-blue-500 px-5 py-5 text-center ">
           Site em <span className="text-green-400">obras</span>, mas nos
-          acompanhe no nosso Instagram!
+          acompanhe de perto no nosso Instagram!
         </h1>
 
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
