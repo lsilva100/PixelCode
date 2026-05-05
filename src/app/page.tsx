@@ -28,7 +28,7 @@ export default function Home() {
       </header>
 
       <section className="relative z-10">
-        <h1 className="text-shadow text-withe mx-auto max-w-lg rounded-xl bg-blue-500 px-5 py-5 text-center ">
+        <h1 className="text-shadow mx-auto max-w-lg rounded-xl bg-blue-500 px-5 py-5 text-center text-white">
           Site em <span className="text-green-400">obras</span>, mas nos
           acompanhe de perto no nosso Instagram!
         </h1>
