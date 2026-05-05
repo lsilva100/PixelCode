@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import { inter } from "@/app/ui/fonts";
+import "@/app/ui/globals.css";
 
 export const metadata: Metadata = {
   title: "PixelCode",
@@ -13,7 +14,7 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
     <html lang="pt-br">
-      <body>{children}</body>
+      <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
   );
 }
