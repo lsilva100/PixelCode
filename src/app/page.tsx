@@ -36,10 +36,12 @@ export default function Home() {
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <div className="flex">
             <button className="flex w-full max-w-lg items-center rounded-xl px-5 py-3 text-lg uppercase text-white">
-              <img
+              <Image
                 src="/instagram.svg"
                 alt="svg-insta"
-                className="mr-2 h-10 w-10"
+                width={40}
+                height={40}
+                className="mr-2"
               />
               Siga no Instagram
             </button>

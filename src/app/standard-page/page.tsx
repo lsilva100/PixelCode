@@ -1,7 +1,9 @@
-export default function Home() {
+
+export default function StandardPage() {
   return (
-    <main>
-      <h1> Hello placeholder standard</h1>
-    </main>
+    <div>
+      <h1>Standard Page</h1>
+      <p>This is a standard page.</p>
+    </div>
   );
 }

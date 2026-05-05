@@ -1,7 +1,9 @@
-export default function Home() {
+
+export default function PremiumPage() {
   return (
-    <main>
-      <h1> Hello placeholder premium</h1>
-    </main>
+    <div>
+      <h1>Premium Page</h1>
+      <p>This is a premium page.</p>
+    </div>
   );
 }
