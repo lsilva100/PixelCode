@@ -1,53 +1,128 @@
 import Image from "next/image";
-import Link from "next/link";
-import CountdownTimer from "./CountdownTimer";
 
 export default function Home() {
   return (
     <main className="w-full">
-      {/* Imagem de fundo */}
-      <Image
-        src="/fundo-edit.jpg" // Caminho para a imagem na pasta public
-        alt="Background"
-        layout="fill" // Faz a imagem ocupar todo o espaço do contêiner
-        objectFit="cover" // Ajusta a imagem para cobrir o espaço
-        className="absolute inset-0"
-      />
+      <ProjectsGallery />
+    </main>
+  );
+}
 
-      <header className="relative z-10 grid w-full grid-cols-[135px_1fr] items-center justify-between bg-blue-500 py-4">
-        <Image
-          className="" // Adicione suas classes CSS aqui
-          src="/logo-pixel.svg" // Caminho para a imagem na pasta public
-          alt="Pixel Logo" // Texto alternativo
-          width={180} // Largura da imagem
-          height={40} // Altura da imagem
-          priority // (opcional) Carregar a imagem com alta prioridade
-        />
+type ProjectProps = {
+  children: React.ReactNode;
+  preview: React.ReactNode;
+};
 
-        <nav className="flex justify-center"></nav>
-      </header>
+function ProjectCard({
+  children,
+  preview,
+}: ProjectProps) {
+  return (
+    <div className="w-full max-w-4xl mx-auto mt-10">
+      <ProjectPreview>
+        {preview}
+      </ProjectPreview>
 
-      <section className="relative z-10">
-        <h1 className="text-shadow mx-auto max-w-lg rounded-xl bg-blue-500 px-5 py-5 text-center text-white">
-          Site em <span className="text-green-400">obras</span>, mas nos
-          acompanhe de perto no nosso Instagram!
-        </h1>
+      <div className="bg-white p-4 shadow-md rounded-xl mt-4">
+        {children}
+      </div>
+    </div>
+  );
+}
 
-        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <div className="flex">
-            <button className="flex w-full max-w-lg items-center rounded-xl px-5 py-3 text-lg uppercase text-white">
+const PROJECTS = [
+  {
+    id: 1,
+    description: "This is a simple project card.",
+    author: "Lucas Silva",
+    authorAvatar: "/lucas_s_avatar.webp",
+    language: "JavaScript",
+    githubLink: "dumb-link.com",
+  },
+  {
+    id: 2,
+    description: "This is another project card.",
+    author: "Lucas Silva",
+    authorAvatar: "/lucas_s_avatar.webp",
+    language: "Python",
+    githubLink: "dumb-link.com",
+  },
+  {
+    id: 3,
+    description: "This is a third project card.",
+    author: "Lucas Neves",
+    authorAvatar: "/lucas_n_avatar.webp",
+    language: "Java",
+    githubLink: "dumb-link.com",
+  },
+];
+
+function ProjectsGallery() {
+  return (
+    <div className="max-w-6xl mx-auto border border-gray-300 rounded-xl p-6 mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {PROJECTS.map((project) => (
+          <ProjectCard
+            key={project.id}
+            preview={
+              <div className="text-center">
+                <h1 className="text-2xl font-bold">
+                  {project.language}
+                </h1>
+
+                <p>Live preview area</p>
+              </div>
+            }
+          >
+            <p>{project.description}</p>
+
+            <div className="flex items-center gap-3 mt-4">
               <Image
-                src="/instagram.svg"
-                alt="svg-insta"
+                src={project.authorAvatar}
+                alt={project.author}
                 width={40}
                 height={40}
-                className="mr-2"
+                className="rounded-full object-cover"
               />
-              Siga no Instagram
-            </button>
-          </div>
-        </div>
-      </section>
-    </main>
+
+              <div>
+                <p className="font-semibold">
+                  {project.author}
+                </p>
+
+                <p className="text-sm text-gray-500">
+                  {project.language}
+                </p>
+              </div>
+            </div>
+
+            <p>Language: {project.language}</p>
+
+            <a
+              href={project.githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 underline"
+            >
+              View on GitHub
+            </a>
+          </ProjectCard>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+type ProjectPreviewProps = {
+  children?: React.ReactNode;
+};
+
+function ProjectPreview({
+  children,
+}: ProjectPreviewProps) {
+  return (
+    <div className="aspect-square md:aspect-video w-full border border-gray-300 rounded-xl shadow-md bg-gray-100 flex items-center justify-center p-4">
+      {children}
+    </div>
   );
 }
