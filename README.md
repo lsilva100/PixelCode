@@ -6,8 +6,8 @@ Welcome to the **PixelCode Portfolio**, a collaborative project showcasing the w
 
 Our project leverages a modern and robust technology stack to ensure high performance, maintainability, and a seamless user experience:
 
-- **Framework:** [Next.js 14](https://nextjs.org/) (App Router)
-- **Library:** [React 18](https://reactjs.org/)
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
+- **Library:** [React 19](https://reactjs.org/)
 - **Language:** [TypeScript](https://www.typescriptlang.org/)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 - **Linting & Formatting:** [ESLint](https://eslint.org/) & [Prettier](https://prettier.io/)
