@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# PixelCode Portfolio
 
-### Getting Started
+Welcome to the **PixelCode Portfolio**, a collaborative project showcasing the work and expertise of **Lucas da Silva** and **Lucas das Neves**. This platform serves as a centralized gallery for our diverse range of software development projects, highlighting our technical skills and creative problem-solving abilities.
 
-First, run the development server:
+## 🚀 Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Our project leverages a modern and robust technology stack to ensure high performance, maintainability, and a seamless user experience:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Framework:** [Next.js 14](https://nextjs.org/) (App Router)
+- **Library:** [React 18](https://reactjs.org/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Linting & Formatting:** [ESLint](https://eslint.org/) & [Prettier](https://prettier.io/)
+- **Icons & Assets:** Custom SVG illustrations and optimized WebP avatars.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔄 Agile Development Methodology
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+We embrace an **Agile** approach to development, focusing on iterative progress, collaboration, and high-quality delivery. Our workflow includes:
 
-## Learn More
+### 1. Sprints & Iterations
+We organize our work into short, manageable cycles. Each cycle focuses on delivering a specific set of features or improvements, allowing for regular feedback and course correction.
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Peer Reviews
+Quality is paramount. All code changes undergo rigorous peer review to ensure adherence to best practices, maintainability, and shared knowledge across the team.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. Continuous Integration
+We prioritize a stable codebase by integrating changes frequently and utilizing automated linting and formatting tools to maintain consistency.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### 4. User-Centric Design
+Our development process is driven by the goal of providing a clean, intuitive, and responsive interface for visitors to explore our work.
 
-## Deploy on Vercel
+## 🛠️ Getting Started
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To run this project locally, follow these steps:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. **Clone the repository:**
+   ```bash
+   git clone <repository-url>
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   bun install
+   ```
+
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   # or
+   bun dev
+   ```
+
+4. **Open the application:**
+   Navigate to [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 👥 The Team
+
+- **Lucas da Silva**: Full Stack Developer.
+- **Lucas das Neves**: Full Stack Developer.
+
+---
+
+*This project is continuously evolving as we build and share more of our journey.*

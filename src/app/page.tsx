@@ -34,7 +34,7 @@ const PROJECTS = [
   {
     id: 1,
     description: "This is a simple project card.",
-    author: "Lucas Silva",
+    author: "Lucas da Silva",
     authorAvatar: "/lucas_s_avatar.webp",
     language: "JavaScript",
     githubLink: "dumb-link.com",
@@ -42,7 +42,7 @@ const PROJECTS = [
   {
     id: 2,
     description: "This is another project card.",
-    author: "Lucas Silva",
+    author: "Lucas da Silva",
     authorAvatar: "/lucas_s_avatar.webp",
     language: "Python",
     githubLink: "dumb-link.com",
@@ -50,7 +50,7 @@ const PROJECTS = [
   {
     id: 3,
     description: "This is a third project card.",
-    author: "Lucas Neves",
+    author: "Lucas das Neves",
     authorAvatar: "/lucas_n_avatar.webp",
     language: "Java",
     githubLink: "dumb-link.com",
