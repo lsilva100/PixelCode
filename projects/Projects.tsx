@@ -13,7 +13,7 @@ export  function ProjectLinearSearch(){
 
 export  function ProjectHashTable(){
     return (
-        <ProjectCard children={HashTablePreview()} projectInfo={{ class: { name: "Desenvolvimento", textColor: "text-orange-900" }, title: "Hash Table", description: ["Implementação e visualização de tabelas hash em diferentes cenários e complexidades"], link: "#" }} />
+        <ProjectCard children={HashTablePreview()} projectInfo={{ class: { name: "Desenvolvimento", textColor: "text-green-900" }, title: "Hash Table", description: ["Implementação e visualização de tabelas hash em diferentes cenários e complexidades"], link: "#" }} />
     );
 }
 
@@ -32,8 +32,8 @@ function ProjectCard({children, projectInfo}: Readonly<ProjectPreviewProps> ) {
     <div className="flex bg-gradient-to-tr from-black to-gray-900 text-white rounded-lg shadow-md p-4 hover:scale-105 transition-transform">
       <div className="flex flex-col gap-4">
         <h1 className={`text-left ${projectInfo.class.textColor} text-xs`}> {projectInfo.class.name} </h1>
-        <h2 className="font-bold text-lg"> {projectInfo.title} </h2>
-        <p className="text-left text-sm font-arial"> {projectInfo.description[0]} </p>
+        <h2 className="text-lg"> {projectInfo.title} </h2>
+        <p className="text-left text-sm"> {projectInfo.description[0]} </p>
         <a href={projectInfo.link} className="text-white hover:text-blue-300 cursor-pointer">VER PROJETO -&gt; </a>
       </div>
       <div className="text-center ml-4">
@@ -46,7 +46,7 @@ function ProjectCard({children, projectInfo}: Readonly<ProjectPreviewProps> ) {
 function BinarySearchPreview() {
   return (
     <div className="w-60 h-48 bg-gray-200 rounded-md flex items-center justify-center">
-      <span className="text-black font-bold">Binary Search</span>
+      <span className="text-black">Binary Search Preview</span>
     </div>
   );
 }
@@ -54,7 +54,7 @@ function BinarySearchPreview() {
 function LinearSearchPreview() {
   return (
     <div className="w-60 h-48 bg-gray-200 rounded-md flex items-center justify-center">
-      <span className="text-black font-bold">Linear Search</span>
+      <span className="text-black">Linear Search Preview</span>
     </div>
   );
 }
@@ -62,7 +62,7 @@ function LinearSearchPreview() {
 function HashTablePreview() {
   return (
     <div className="w-60 h-48 bg-gray-200 rounded-md flex items-center justify-center">
-      <span className="text-black font-bold">Hash Table</span>
+      <span className="text-black">Hash Table Preview</span>
     </div>
   );
 }
@@ -70,7 +70,7 @@ function HashTablePreview() {
 function GraphSearchPreview() {
   return (
     <div className="w-60 h-48 bg-gray-200 rounded-md flex items-center justify-center">
-      <span className="text-black font-bold">Graph Search</span>
+      <span className="text-black">Graph Search Preview</span>
     </div>
   );
 }
