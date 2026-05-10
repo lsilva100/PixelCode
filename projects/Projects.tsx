@@ -29,7 +29,7 @@ export  function ProjectGraphSearch(){
 
 function ProjectCard({children, projectInfo}: Readonly<ProjectPreviewProps> ) {
   return (
-    <div className="flex bg-black text-white rounded-lg shadow-md p-4 ">
+    <div className="flex bg-gradient-to-tr from-black to-gray-900 text-white rounded-lg shadow-md p-4 hover:scale-105 transition-transform">
       <div className="flex flex-col gap-4">
         <h1 className={`text-left ${projectInfo.class.textColor} text-xs`}> {projectInfo.class.name} </h1>
         <h2 className="font-bold text-lg"> {projectInfo.title} </h2>
