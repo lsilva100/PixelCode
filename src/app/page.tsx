@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Toggle from "./components/Toggle";
+import CountdownTimer from "./CountdownTimer";
 
 export default function Home() {
   return (
@@ -14,36 +14,17 @@ export default function Home() {
         className="absolute inset-0"
       />
 
-      <header className="relative z-10 grid w-full grid-cols-3 gap-4 items-center bg-black py-4 px-4 text-white">
-        <div className="flex items-center justify-start">
-          <Image
-            src="/logo_l2.svg"
-            alt="Pixel Logo"
-            width={90}
-            height={40}
-            priority
-          />
-        </div>
+      <header className="relative z-10 grid w-full grid-cols-[135px_1fr] items-center justify-between bg-blue-500 py-4">
+        <Image
+          className="" // Adicione suas classes CSS aqui
+          src="/logo-pixel.svg" // Caminho para a imagem na pasta public
+          alt="Pixel Logo" // Texto alternativo
+          width={180} // Largura da imagem
+          height={40} // Altura da imagem
+          priority // (opcional) Carregar a imagem com alta prioridade
+        />
 
-        <nav className="flex items-center justify-center gap-6 text-sm uppercase tracking-[0.2em]">
-          <Link href="#">About us</Link>
-          <Link href="#">Projects</Link>
-          <Link href="#">Contact</Link>
-        </nav>
-
-        <div className="flex items-center justify-end">
-      <div className="inline-flex items-center gap-5 rounded-full border border-zinc-700 px-4 py-2">
-        <span className="text-sm uppercase tracking-wider text-zinc-400">
-        LSilva
-        </span>
-
-      <Toggle />
-
-        <span className="text-sm uppercase tracking-wider text-zinc-400">
-        LMateus
-          </span>
-          </div>
-          </div>
+        <nav className="flex justify-center"></nav>
       </header>
 
       <section className="relative z-10">
@@ -64,7 +45,8 @@ export default function Home() {
             </button>
           </div>
         </div>
-      </section>
+      </div>
     </main>
   );
 }
+
