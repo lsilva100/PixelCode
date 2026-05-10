@@ -31,10 +31,16 @@ function ProjectCard({children, projectInfo}: Readonly<ProjectPreviewProps> ) {
   return (
     <div className="flex bg-gradient-to-tr from-black to-gray-900 text-white rounded-lg shadow-md p-4 hover:scale-105 transition-transform">
       <div className="flex flex-col gap-4">
-        <h1 className={`text-left ${projectInfo.class.textColor} text-xs`}> {projectInfo.class.name} </h1>
-        <h2 className="text-lg"> {projectInfo.title} </h2>
-        <p className="text-left text-sm"> {projectInfo.description[0]} </p>
-        <a href={projectInfo.link} className="text-white hover:text-blue-300 cursor-pointer">VER PROJETO -&gt; </a>
+        <span className={`text-left ${projectInfo.class.textColor} text-xs font-semibold uppercase tracking-wider`}> {projectInfo.class.name} </span>
+        <h2 className="text-lg font-bold"> {projectInfo.title} </h2>
+        <p className="text-left text-sm opacity-80"> {projectInfo.description[0]} </p>
+        <a 
+          href={projectInfo.link} 
+          className="text-white hover:text-blue-300 cursor-pointer text-sm font-medium mt-auto"
+          aria-label={`Ver o projeto ${projectInfo.title}`}
+        >
+          VER PROJETO -&gt; 
+        </a>
       </div>
       <div className="text-center ml-4">
         {children}
