@@ -1,0 +1,78 @@
+
+
+
+export default function ProjectsGallery() {
+  return (
+   <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
+      <ProjectCard children={BinarySearchPreview()} projectInfo={{ class: { name: "Pesquisa", textColor: "text-blue-900" }, title: "Binary Search", description: ["Pesquisa e visualização sobre busca binária em diferentes cenários e complexidades"], link: "#" }} />
+      <ProjectCard children={LinearSearchPreview()} projectInfo={{ class: { name: "Algoritmo", textColor: "text-yellow-900" }, title: "Linear Search", description: ["Pesquisa e visualização sobre busca linear em diferentes cenários e complexidades"], link: "#" }} />
+      <ProjectCard children={HashTablePreview()} projectInfo={{ class: { name: "Desenvolvimento", textColor: "text-orange-900" }, title: "Hash Table", description: ["Implementação e visualização de tabelas hash em diferentes cenários e complexidades"], link: "#" }} />
+        <ProjectCard children={GraphSearchPreview()} projectInfo={{ class: { name: "Algoritmo", textColor: "text-yellow-900" }, title: "Graph Search", description: ["Implementação e visualização de algoritmos de busca em grafos, como DFS e BFS"], link: "#" }} />
+    </div>
+  );
+}
+
+function ProjectCard({children, projectInfo}: Readonly<ProjectPreviewProps> ) {
+  return (
+    <div className="flex bg-black text-white rounded-lg shadow-md p-4 ">
+      <div className="flex flex-col gap-4">
+        <h1 className={`text-left ${projectInfo.class.textColor} text-xs`}> {projectInfo.class.name} </h1>
+        <h2 className="font-bold text-lg"> {projectInfo.title} </h2>
+        <p className="text-left text-sm font-arial"> {projectInfo.description[0]} </p>
+        <a href={projectInfo.link} className="text-white hover:text-blue-300 cursor-pointer">VER PROJETO -&gt; </a>
+      </div>
+      <div className="text-center ml-4">
+        {children}
+      </div>
+    </div>
+  );
+}
+
+interface category {
+    name: string;
+    textColor: string;
+}
+
+type ProjectInfoProps = {
+    class: category;
+    title: string;
+    description: string[];
+    link: string;
+};
+
+type ProjectPreviewProps = {
+    children : React.ReactNode;
+    projectInfo: ProjectInfoProps;
+};
+
+function BinarySearchPreview() {
+  return (
+    <div className="w-60 h-48 bg-gray-200 rounded-md flex items-center justify-center">
+      <span className="text-black font-bold">Binary Search</span>
+    </div>
+  );
+}
+
+function LinearSearchPreview() {
+  return (
+    <div className="w-60 h-48 bg-gray-200 rounded-md flex items-center justify-center">
+      <span className="text-black font-bold">Linear Search</span>
+    </div>
+  );
+}
+
+function HashTablePreview() {
+  return (
+    <div className="w-60 h-48 bg-gray-200 rounded-md flex items-center justify-center">
+      <span className="text-black font-bold">Hash Table</span>
+    </div>
+  );
+}
+
+function GraphSearchPreview() {
+  return (
+    <div className="w-60 h-48 bg-gray-200 rounded-md flex items-center justify-center">
+      <span className="text-black font-bold">Graph Search</span>
+    </div>
+  );
+}
