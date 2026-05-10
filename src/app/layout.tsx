@@ -1,11 +1,21 @@
 import type { Metadata } from "next";
 import { inter } from "@/app/ui/fonts";
 import "@/app/ui/globals.css";
-import NavBar from "@/app/components/NavBar";
+
 
 export const metadata: Metadata = {
-  title: "PixelCode",
-  description: "PixelCode",
+  title: "PixelCode | Portfolio de Desenvolvimento e Algoritmos",
+  description: "PixelCode - Uma seleção de trabalhos de Lucas da Silva e Lucas das Neves que unem lógica, design e desenvolvimento. Explore visualizações de algoritmos e projetos de software.",
+  keywords: ["desenvolvimento", "algoritmos", "lógica", "design", "software", "visualização", "busca binária", "busca linear", "tabela hash", "grafos", "Lucas da Silva", "Lucas das Neves"],
+  authors: [{ name: "Lucas da Silva" }, { name: "Lucas das Neves" }],
+  openGraph: {
+    title: "PixelCode | Portfolio de Desenvolvimento e Algoritmos",
+    description: "Uma seleção de trabalhos que unem lógica, design e desenvolvimento por Lucas da Silva e Lucas das Neves.",
+    type: "website",
+    locale: "pt_BR",
+    url: "https://pixelcode.com.br",
+    siteName: "PixelCode",
+  },
 };
 
 type RootLayoutProps = {
@@ -16,12 +26,6 @@ export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
     <html lang="pt-br">
       <body className={`${inter.className} antialiased`}>
-        <div className="w-full bg-blue-500 py-6 flex justify-center items-center">
-        <h1 className="text-3xl font-bold text-white">
-          Landing page!
-        </h1>
-        </div>
-        <NavBar />
         {children}
       </body>
     </html>
