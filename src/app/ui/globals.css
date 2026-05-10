@@ -14,9 +14,7 @@
     @apply py-20 sm:py-36;
     height: 618px;
   }
-<<<<<<< HEAD:src/app/globals.css
   .marquee{
-=======
   button {
     @apply rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2;
     background: linear-gradient(
@@ -27,8 +25,8 @@
       rgb(255, 189, 68)
     );
   }
+  }
   .marquee {
->>>>>>> 66794c572ff04cc3288ad2a20206c738b3ba0765:src/app/ui/globals.css
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
