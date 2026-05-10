@@ -1,16 +1,31 @@
 
-
-
-export default function ProjectsGallery() {
-  return (
-   <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
-      <ProjectCard children={BinarySearchPreview()} projectInfo={{ class: { name: "Pesquisa", textColor: "text-blue-900" }, title: "Binary Search", description: ["Pesquisa e visualização sobre busca binária em diferentes cenários e complexidades"], link: "#" }} />
-      <ProjectCard children={LinearSearchPreview()} projectInfo={{ class: { name: "Algoritmo", textColor: "text-yellow-900" }, title: "Linear Search", description: ["Pesquisa e visualização sobre busca linear em diferentes cenários e complexidades"], link: "#" }} />
-      <ProjectCard children={HashTablePreview()} projectInfo={{ class: { name: "Desenvolvimento", textColor: "text-orange-900" }, title: "Hash Table", description: ["Implementação e visualização de tabelas hash em diferentes cenários e complexidades"], link: "#" }} />
-        <ProjectCard children={GraphSearchPreview()} projectInfo={{ class: { name: "Algoritmo", textColor: "text-yellow-900" }, title: "Graph Search", description: ["Implementação e visualização de algoritmos de busca em grafos, como DFS e BFS"], link: "#" }} />
-    </div>
-  );
+export  function ProjectBinarySearch(){
+    return (
+        <ProjectCard children={BinarySearchPreview()} projectInfo={{ class: { name: "Pesquisa", textColor: "text-blue-900" }, title: "Binary Search", description: ["Pesquisa e visualização sobre busca binária em diferentes cenários e complexidades"], link: "#" }} />
+    );
 }
+
+export  function ProjectLinearSearch(){
+    return (
+        <ProjectCard children={LinearSearchPreview()} projectInfo={{ class: { name: "Algoritmo", textColor: "text-yellow-900" }, title: "Linear Search", description: ["Pesquisa e visualização sobre busca linear em diferentes cenários e complexidades"], link: "#" }} />
+    );
+}
+
+export  function ProjectHashTable(){
+    return (
+        <ProjectCard children={HashTablePreview()} projectInfo={{ class: { name: "Desenvolvimento", textColor: "text-orange-900" }, title: "Hash Table", description: ["Implementação e visualização de tabelas hash em diferentes cenários e complexidades"], link: "#" }} />
+    );
+}
+
+export  function ProjectGraphSearch(){
+    return (
+        <ProjectCard children={GraphSearchPreview()} projectInfo={{ class: { name: "Algoritmo", textColor: "text-yellow-900" }, title: "Graph Search", description: ["Implementação e visualização de algoritmos de busca em grafos, como DFS e BFS"], link: "#" }} />
+    );
+}
+
+
+
+
 
 function ProjectCard({children, projectInfo}: Readonly<ProjectPreviewProps> ) {
   return (
@@ -27,23 +42,6 @@ function ProjectCard({children, projectInfo}: Readonly<ProjectPreviewProps> ) {
     </div>
   );
 }
-
-interface category {
-    name: string;
-    textColor: string;
-}
-
-type ProjectInfoProps = {
-    class: category;
-    title: string;
-    description: string[];
-    link: string;
-};
-
-type ProjectPreviewProps = {
-    children : React.ReactNode;
-    projectInfo: ProjectInfoProps;
-};
 
 function BinarySearchPreview() {
   return (
@@ -76,3 +74,22 @@ function GraphSearchPreview() {
     </div>
   );
 }
+
+
+interface category {
+    name: string;
+    textColor: string;
+}
+
+type ProjectInfoProps = {
+    class: category;
+    title: string;
+    description: string[];
+    link: string;
+};
+
+type ProjectPreviewProps = {
+    children: React.ReactNode;
+    projectInfo: ProjectInfoProps;
+};
+
