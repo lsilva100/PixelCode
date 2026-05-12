@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ProjectsGallery from "../../components/ProjectGallery";
+import Toggle from "../../components/Toggle";
 
 
 export default function Home() {
@@ -14,8 +15,9 @@ export default function Home() {
           width={180} 
           height={40} 
           priority 
-        />
+          />
 
+          <Toggle />
         <nav className="flex justify-center"></nav>
       </header>
        <div className="bg-gradient-to-tl from-black to-gray-900 text-white max-w-6xl mx-auto p-6">
