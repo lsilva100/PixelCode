@@ -37,3 +37,27 @@ export function SortingAlgorithmPreview() {
     </div>
   );
 }
+
+export function DynamicProgrammingPreview() {
+  return (
+    <div className="w-full h-48 bg-gray-200 rounded-md flex items-center justify-center">
+      <span className="text-black">Dynamic Programming Preview</span>
+    </div>
+  );
+}
+
+export function BacktrackingPreview() {
+  return (
+    <div className="w-full h-48 bg-gray-200 rounded-md flex items-center justify-center">
+      <span className="text-black">Backtracking Preview</span>
+    </div>
+  );
+}
+
+export function DivideAndConquerPreview() {
+  return (
+    <div className="w-full h-48 bg-gray-200 rounded-md flex items-center justify-center">
+      <span className="text-black">Divide and Conquer Preview</span>
+    </div>
+  );
+}

@@ -1,4 +1,4 @@
-import {BinarySearchPreview, SortingAlgorithmPreview} from "./previews";
+import {BacktrackingPreview, BinarySearchPreview, DivideAndConquerPreview, DynamicProgrammingPreview, SortingAlgorithmPreview} from "./previews";
 import {LinearSearchPreview} from "./previews";
 import {HashTablePreview} from "./previews";
 import {GraphSearchPreview} from "./previews"; 
@@ -60,31 +60,31 @@ export const projectDataL2: ProjectProps[] = [
     },
 
     {
-        Preview: <LinearSearchPreview />,
+        Preview: <BacktrackingPreview />,
         Info: {
             class: {name: "Algoritmo de Busca", textColor: "text-blue-500"},
-            title: "Busca Linear",
-            description: ["Implementação do algoritmo de busca linear em JavaScript, demonstrando sua simplicidade e uso em cenários específicos."],
+            title: "Backtracking",
+            description: ["Implementação do algoritmo de backtracking em JavaScript, demonstrando sua aplicação em problemas de busca e resolução de quebra-cabeças."],
             link: "#"
         }
     },    
 
     {
-        Preview: <HashTablePreview />,
+        Preview: <DivideAndConquerPreview />,
         Info: { 
             class: {name: "Estrutura de Dados", textColor: "text-green-500"},
-            title: "Tabela Hash",
-            description: ["Implementação de uma tabela hash em JavaScript, demonstrando seu funcionamento e benefícios em comparação com outras estruturas de dados."],
+            title: "Divide and Conquer",
+            description: ["Implementação do algoritmo de divide and conquer em JavaScript, demonstrando sua aplicação em problemas de busca e resolução de quebra-cabeças."],
             link: "#"
         }
     }, 
 
     {
-        Preview: <GraphSearchPreview />,
+        Preview: <DynamicProgrammingPreview />,
         Info: {
             class: {name: "Algoritmo de Busca", textColor: "text-blue-500"},
-            title: "Busca em Grafos",
-            description: ["Implementação do algoritmo de busca em grafos em JavaScript, demonstrando sua aplicação em problemas de roteamento e navegação."],
+            title: "Programação Dinâmica",
+            description: ["Implementação do algoritmo de programação dinâmica em JavaScript, demonstrando sua aplicação em problemas de otimização."],
             link: "#"
         }
     }
