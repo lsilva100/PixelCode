@@ -1,10 +1,18 @@
+'use client';
+
 import Image from "next/image";
 import Link from "next/link";
 import ProjectsGallery from "../../components/ProjectGallery";
 import Toggle from "../../components/Toggle";
+import { projectDataL1 } from "../../projects/descriptions";
+import { projectDataL2 } from "../../projects/descriptions";
+import React, { useState } from "react";
 
 
 export default function Home() {
+
+  const [author, setAuthor] = useState({"name": "Lucas das Neves", "projects": projectDataL1});
+
   return (
     <main className="w-full min-h-screen bg-black">
      <header className="relative z-10 flex w-full items-center justify-between bg-gradient-to-tl from-black to-gray-900 py-6 px-8">
@@ -36,12 +44,12 @@ export default function Home() {
 
        <div className="bg-gradient-to-tl from-black to-gray-900 text-white w-full p-6">
         <div className="flex flex-col gap-4 mb-8">
-          <p className="text-sm uppercase tracking-widest opacity-70">Autores: Lucas da Silva & Lucas das Neves</p>
+          <p className="text-sm uppercase tracking-widest opacity-70">Autor: {author.name}</p>
           <h1 className="text-4xl font-bold text-white">Projetos</h1>
           <p className="text-lg opacity-90">Uma seleção de trabalhos que unem lógica, design e desenvolvimento</p>
         </div>
         <div>
-          <ProjectsGallery />
+          <ProjectsGallery projectsFromAuthor={author.projects} />
         </div>
       </div>
     </main>
