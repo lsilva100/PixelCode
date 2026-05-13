@@ -10,8 +10,20 @@ import React, { useState } from "react";
 
 
 export default function Home() {
+  type ToggleProps = {
+  enabled: boolean;
+  onToggle: (value: boolean) => void;
+  };
 
-  const [author, setAuthor] = useState({"name": "Lucas das Neves", "projects": projectDataL1});
+  const [Enabled, setEnabled] = useState(true);
+
+  const author = Enabled ? {
+    name: "Lucas das Neves Matheus",
+    projects: projectDataL1
+  } : {
+    name: "Lucas Silva",
+    projects: projectDataL2
+  };
 
   return (
     <main className="w-full min-h-screen bg-black">
@@ -36,7 +48,7 @@ export default function Home() {
         <div className="flex items-center gap-4 rounded-full border border-zinc-700 px-5 py-3 text-sm text-white">
     <span>LSILVA</span>
 
-    <Toggle />
+    <Toggle enabled={Enabled} onToggle={setEnabled} />
 
     <span>LMATEUS</span>
   </div>
@@ -48,7 +60,7 @@ export default function Home() {
           <h1 className="text-4xl font-bold text-white">Projetos</h1>
           <p className="text-lg opacity-90">Uma seleção de trabalhos que unem lógica, design e desenvolvimento</p>
         </div>
-        <div>
+        <div className="transition-transform duration-300">
           <ProjectsGallery projectsFromAuthor={author.projects} />
         </div>
       </div>
