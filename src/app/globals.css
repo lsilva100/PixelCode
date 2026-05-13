@@ -5,53 +5,53 @@
     @apply text-4xl font-bold tracking-tight sm:max-w-xl sm:text-6xl;
   }
   h2 {
-    @apply text-2xl font-semibold sm:text-4xl;
+    @apply text-2xl sm:text-4xl font-semibold;
   }
   h3 {
-    @apply text-xl font-semibold sm:text-3xl;
+    @apply text-xl sm:text-3xl font-semibold;
   }
   section {
     @apply py-20 sm:py-36;
     height: 618px;
   }
-  .marquee{
   button {
     @apply rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2;
-    background: linear-gradient(
-      45deg,
-      rgb(131, 58, 180),
-      rgb(193, 53, 132),
-      rgb(244, 122, 71),
-      rgb(255, 189, 68)
-    );
+    background: linear-gradient(45deg, rgb(131, 58, 180), rgb(193, 53, 132), rgb(244, 122, 71), rgb(255, 189, 68));
   }
-  }
-  .marquee {
+  .marquee{
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
     position: relative; /* Necessário para posicionamento do texto */
   }
 
-  .marquee p {
+  .marquee p{
     display: inline-block;
     padding-left: 100%;
     animation: marquee 8s linear infinite;
     font-size: 1.5rem;
   }
 
+  
+  
+
   @keyframes marquee {
     0% {
       transform: translateX(100%); /* Começa fora da tela à direita */
     }
     100% {
-      transform: translateX(-100%); /* Mantém fora da tela */
+        transform: translateX(-100%); /* Mantém fora da tela */
     }
+    
   }
+  
 }
 
 @tailwind components;
 @tailwind utilities;
+
+
+
 
 html {
   scroll-behavior: smooth;
@@ -60,8 +60,8 @@ html {
   padding: 0;
 }
 
-header {
-  grid-column: full-width-start / full-width-end;
+header{
+  grid-column:full-width-start / full-width-end;
   padding: 50px;
 }
 
@@ -86,8 +86,8 @@ main {
     minmax(0, var(--breakout-size)) [breakout-end]
     minmax(var(--padding-inline), 1fr) [full-width-end];
 
-  height: 100%;
-}
+    height: 100%;
+} 
 
 main > :not(.breakout, .full-width),
 .full-width > :not(.breakout, .full-width) {
