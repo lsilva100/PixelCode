@@ -64,6 +64,9 @@ export default function Home() {
           <ProjectsGallery key={author.name} projectsFromAuthor={author.projects}/>
         </div>
       </div>
+      <footer className="bg-gradient-to-tl from-black to-gray-900 text-white w-full p-6">
+      <p className="text-center opacity-70">© 2026 LSILVA & LNEVES. Todos os direitos reservados.</p>
+    </footer>
     </main>
   );
 }
