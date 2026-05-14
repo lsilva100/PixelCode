@@ -60,8 +60,8 @@ export default function Home() {
           <h1 className="text-4xl font-bold text-white">Projetos</h1>
           <p className="text-lg opacity-90">Uma seleção de trabalhos que unem lógica, design e desenvolvimento</p>
         </div>
-        <div className="transition-transform duration-300">
-          <ProjectsGallery projectsFromAuthor={author.projects} />
+        <div >
+          <ProjectsGallery key={author.name} projectsFromAuthor={author.projects}/>
         </div>
       </div>
     </main>
