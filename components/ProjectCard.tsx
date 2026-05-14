@@ -37,7 +37,7 @@ export default function ProjectCard({ props, direction }: { props: ProjectProps;
           scale: 0.9,
         }}
         transition={{
-          duration: 0.85,
+          duration: 1.35,
           ease: [0.22, 1, 0.36, 1],
         }}
         whileHover={{
